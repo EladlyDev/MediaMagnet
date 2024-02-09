@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 import validators
-from pytube import YouTube, Playlist
+import sys
+import subprocess
+try:
+    from pytube import YouTube, Playlist
+    from pytube.cli import on_progress
+except Exception:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "pytube"])
+    from pytube import YouTube, Playlist
+    from pytube.cli import on_progress
 import os
-from pytube.cli import on_progress
 
 logo = """
   __  __          _ _       __  __                        _   
