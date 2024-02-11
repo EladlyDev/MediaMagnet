@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" The interractive cmd for the app """
 import cmd
 import sys
 import subprocess
